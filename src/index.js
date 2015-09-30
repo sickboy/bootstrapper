@@ -142,7 +142,7 @@ function run() {
     return ensureLoader().then(() => {
       return preparePlatform().then(() => {
         for (let i = 0, ii = appHost.length; i < ii; ++i) {
-          handleApp(loader, appHost[i]).catch(logger.error.bind(logger));
+          handleApp(appHost[i]).catch(logger.error.bind(logger));
         }
 
         isReady = true;
